@@ -1,6 +1,8 @@
 import React from "react";
 
 import Titles from "./components/Titles";
+import Form from "./components/Form";
+import Weather from "./components/Weather";
 
 class App extends React.Component {
   render(){
@@ -9,6 +11,8 @@ class App extends React.Component {
       //Can only have one parent
       <div>
         <Titles/>
+        <Form/>
+        <Weather/>
       </div>
   );
   }

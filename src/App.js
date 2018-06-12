@@ -1,16 +1,18 @@
 import React from "react";
 
+import Titles from "./components/Titles";
+
 class App extends React.Component {
   render(){
     return(
       //this is JSX. Babel converts this to JS..
       //Can only have one parent
-      <div>Hello World!
-        <h1>hiiiiiiiiii</h1>
+      <div>
+        <Titles/>
       </div>
   );
   }
-}
+};
 
 
 //in order to import this.. you need to export it

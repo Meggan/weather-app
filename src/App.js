@@ -30,7 +30,6 @@ class App extends React.Component {
     const data = await api_call.json();
 
     if (city && country) {
-      console.log(data);
 
       //set state
       this.setState({
@@ -59,21 +58,33 @@ class App extends React.Component {
       //this is JSX. Babel converts this to JS..
       //Can only have one parent
       <div>
-        <Titles />
-        <Form getWeather={this.getWeather} />
-        <Weather
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-        />
+        <div className="wrapper">
+          <div className="main">
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-5 title-container">
+                  <Titles />
+                  <div className="col-xs-7 form-container">
+                    <Form getWeather={this.getWeather} />
+                    <Weather
+                      temperature={this.state.temperature}
+                      city={this.state.city}
+                      country={this.state.country}
+                      humidity={this.state.humidity}
+                      description={this.state.description}
+                      error={this.state.error}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 };
 
-
 //in order to import this.. you need to export it
 export default App;
+
